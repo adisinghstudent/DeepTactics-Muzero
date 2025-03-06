@@ -55,8 +55,7 @@ class Network(nn.Module):
         # Representation: from raw observation to hidden state.
         self.representation = nn.Sequential(
             nn.Linear(config.observation_space_size, config.hidden_layer_size),
-            nn.ReLU(),
-        
+            nn.ReLU(),    
         )
 
         # Value head: predicts scalar value from hidden state.
